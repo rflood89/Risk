@@ -24,9 +24,11 @@ release : $(CC_REL_OUT)
 
 run_rel : $(CC_REL_OUT)
 	@echo "Risk: Executing $(CC_REL_OUT)"
+	@exec $^
 
 debug : $(CC_DBG_OUT)
 	@echo "Risk: [debug] $(CC_DBG_OUT) was built successfully"
+	@exec $^
 
 run_dbg : $(CC_DBG_OUT)
 	@echo "Risk: Executing $(CC_DBG_OUT)"
